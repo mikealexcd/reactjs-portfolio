@@ -1,50 +1,83 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import logo from './logo-simple.png';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Tabs, Tab} from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <ControlledTabs />
     </div>
   );
 }
 
 export default App;
 
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isused: "nav-link active"
-    }
-  }
-  render() {
-    return (
-      <nav>
-      <ul className="nav nav-tabs" id="navId">
-        <li className="nav-item">
-          <a href="#tab1Id" className={this.state.isused}>Home</a>
-        </li>
-        <li className="nav-item"><a className="nav-link" href="web-development.html">Web Development</a></li>
-        <li className="nav-item"><a className="nav-link" href="e-commerce.html">E-Commerce</a></li>
-        <li className="nav-item"><a className="nav-link" href="photography.html">Photography</a></li>
-      </ul>
-      </nav>
-    );
-  }
+function ControlledTabs() {
+  const [key, setKey] = useState('home');
+
+  return (
+    <Tabs
+      id="controlled-tab-example"
+      activeKey={key}
+      onSelect={(k) => setKey(k)}
+    >
+      <Tab eventKey="home" title="Home">
+        <Home />
+      </Tab>
+      <Tab eventKey="webdev" title="WebDev">
+      <WebDev />
+      </Tab>
+      <Tab eventKey="e-commerce" title="E-commerce">
+      <Ecommerce />
+      </Tab>
+      <Tab eventKey="photography" title="Photography">
+      <Photography />
+      </Tab>
+    </Tabs>
+  );
+}
+
+
+function Home() {
+  return (
+    <div className="main-content d-flex flex-row">
+    <img src={logo} className="my-logo" alt="logo" />
+    <div>
+      <h1 className="my-name">MIGUEL CEJA</h1>
+      <p className="my-title">Web Developer and <br />E-commerce Specialist</p>
+    </div>
+  </div>
+  )
+}
+
+function WebDev() {
+  return (
+    <div className="main-content d-flex flex-row">
+    <div>
+      <h1 className="my-name">Web Development</h1>
+    </div>
+  </div>
+  )
+}
+
+function Ecommerce() {
+  return (
+    <div className="main-content d-flex flex-row">
+    <div>
+      <h1 className="my-name">E-Commerce</h1>
+    </div>
+  </div>
+  )
+}
+
+function Photography() {
+  return (
+    <div className="main-content d-flex flex-row">
+    <div>
+      <h1 className="my-name">Photography</h1>
+    </div>
+  </div>
+  )
 }
