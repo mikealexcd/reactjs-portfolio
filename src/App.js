@@ -40,7 +40,8 @@ function Home() {
     <img src={logo} className="my-logo" alt="logo" />
     <div>
       <h1 className="top-title">MIGUEL CEJA</h1>
-      <p className="description">Web Developer and <br />E-Commerce Specialist</p>
+      <p className="description">WEB DEVELOPER</p>
+      <p className="description">& E-COMMERCE SPECIALIST</p>
     </div>
   </div>
   );
