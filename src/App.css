@@ -15,17 +15,21 @@
   font-size: calc(10px + 2vmin);
 }
 
-.my-name {
+.top-title {
   font-size: 3rem;
   font-weight: 200;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
-.my-title{
+.description{
   background-color: #15161a;
+  text-align: center;
   color: white;
   line-height: 1.5em;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nav-link {
+  color: black;
 }
