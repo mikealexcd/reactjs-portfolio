@@ -14,7 +14,7 @@ function Navigation() {
             <Nav.Link as={Link} to="/" eventKey="/"><FontAwesomeIcon icon={faHome} /></Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
         <Nav.Item>
             <Nav.Link as={Link} to="/webdev" eventKey="/webdev">WEB DEVELOPMENT</Nav.Link>
         </Nav.Item>
