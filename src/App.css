@@ -38,11 +38,20 @@
   text-align: center;
 }
 
-.examples {
+.wobble-chair {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 500px;
   width: 500px;
+}
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(80%);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  filter: invert(100%);
 }
