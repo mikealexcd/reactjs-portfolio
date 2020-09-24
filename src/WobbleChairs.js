@@ -17,7 +17,7 @@ export default function WobbleChairs() {
       }
 
     return (
-        <div className="full-container photos">
+        <div className="d-flex flex-column align-items-center photos">
       <FontAwesomeIcon icon={faChevronUp} className="mb-5" onClick={scrollToTop} />
       <Container>
         <Row>

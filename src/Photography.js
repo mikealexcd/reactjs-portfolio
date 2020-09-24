@@ -10,15 +10,15 @@ let ScrollTo = Scroll.Link;
 export default function Photography() {
     return (
       <div>
-      <div className="full-container">
-        <div className="top-wrapper">
-          <h1 className="top-title">Photography</h1>
-          <ScrollTo to="photos" smooth={true}>
-              <FontAwesomeIcon icon={faChevronDown} />
-          </ScrollTo>
-        </div>
-    </div>
-    <WobbleChairs />
+        <div className="full-container">
+          <div className="top-wrapper">
+            <h1 className="top-title">Photography</h1>
+            <ScrollTo to="photos" smooth={true}>
+                <FontAwesomeIcon icon={faChevronDown} />
+            </ScrollTo>
+          </div>
+      </div>
+      <WobbleChairs />
     </div>
       );
     }
