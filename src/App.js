@@ -7,7 +7,11 @@ import {
 import logo from './logo-simple.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from './Navigation.js';
+import Navigation from './Navigation';
+import Photography from './Photography';
+import WebDev from './Webdev';
+import Ecommerce from './Ecommerce';
+
 
 function App() {
   return (
@@ -36,7 +40,7 @@ export default App;
 
 function Home() {
   return (
-    <div className="main-content d-flex flex-row">
+    <div className="full-container d-flex flex-row">
     <img src={logo} className="my-logo" alt="logo" />
     <div>
       <h1 className="top-title">MIGUEL CEJA</h1>
@@ -47,32 +51,4 @@ function Home() {
   );
 }
 
-function WebDev() {
-  return (
-    <div className="main-content">
-      <div>
-        <h1 className="top-title">Web Development</h1>
-      </div>
-    </div> 
-  );
-}
 
-function Ecommerce() {
-  return (
-    <div className="main-content">
-      <div>
-        <h1 className="top-title">E-Commerce</h1>
-      </div>
-  </div>
-  );
-}
-
-function Photography() {
-  return (
-    <div className="main-content">
-      <div>
-        <h1 className="top-title">Photography</h1>
-      </div>
-  </div>
-  );
-}
