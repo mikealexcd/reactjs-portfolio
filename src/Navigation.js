@@ -15,15 +15,15 @@ function Navigation() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-        <Nav.Item>
-            <Nav.Link as={Link} to="/webdev" eventKey="/webdev">WEB DEVELOPMENT</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Nav.Link as={Link} to="/e-commerce" eventKey="/e-commerce">E-COMMERCE</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Nav.Link as={Link} to="/photography" eventKey="/photography">PHOTOGRAPHY</Nav.Link>
-        </Nav.Item>
+            <Nav.Item className={key === "/webdev" ? 'nav-item active' : 'nav-item'} >
+                <Nav.Link as={Link} to="/webdev" eventKey="/webdev">WEB DEVELOPMENT</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className={key === "/e-commerce" ? 'nav-item active' : 'nav-item'}>
+                <Nav.Link as={Link} to="/e-commerce" eventKey="/e-commerce">E-COMMERCE</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className={key === "/photography" ? 'nav-item active' : 'nav-item'}>
+                <Nav.Link as={Link} to="/photography" eventKey="/photography">PHOTOGRAPHY</Nav.Link>
+            </Nav.Item>
         </Navbar.Collapse>
       </Navbar>
     );
