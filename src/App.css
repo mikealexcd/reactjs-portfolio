@@ -51,7 +51,7 @@ p {
   font-size: calc(10px + 2vmin);
 }
 
-.wobble-chair {
+.wobble-chair, .carousel {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,4 +67,14 @@ p {
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
   filter: invert(100%);
+}
+
+.arrow-up {
+  position: relative;
+  top: 10px;
+}
+
+.arrow-down {
+  position: relative;
+  bottom: 10px;
 }

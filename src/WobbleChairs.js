@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoExamples from './wobble/PhotoExamples';
+import WobblePhotos from './wobble/WobblePhotos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import {Row, Col, Container} from 'react-bootstrap';
@@ -27,7 +27,7 @@ export default function WobbleChairs() {
           </Col>
           <Col>
             <Element>
-            <PhotoExamples />
+            <WobblePhotos />
             </Element>
           </Col>
         </Row>
