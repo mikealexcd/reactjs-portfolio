@@ -21,3 +21,6 @@ instructions.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/Carousel.js
+src/web-examples/anthrodesk.jpg
+src/web-examples/anthrodesk.svg
