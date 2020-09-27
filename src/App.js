@@ -11,6 +11,18 @@ import Navigation from './Navigation';
 import Photography from './Photography';
 import WebDev from './Webdev';
 import Ecommerce from './Ecommerce';
+import firebase from 'firebase/app'
+
+firebase.initializeApp({
+  apiKey: "AIzaSyAaP3yJEL1Vj2aE560sxo2eSavtWpuhoyw",
+  authDomain: "first-project-209902.firebaseapp.com",
+  databaseURL: "https://first-project-209902.firebaseio.com",
+  projectId: "first-project-209902",
+  storageBucket: "first-project-209902.appspot.com",
+  messagingSenderId: "33356502713",
+  appId: "1:33356502713:web:50d0637b434da560a9ad68",
+  measurementId: "G-MEQ9C1FC7X"
+})
 
 
 function App() {
