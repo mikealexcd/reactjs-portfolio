@@ -20,12 +20,12 @@ export default function ShowCasePage(props) {
         <div className="full-container d-flex flex-column align-items-center photos" id={props.title}>
       <FontAwesomeIcon icon={faChevronUp} className="mb-5 arrow-up" onClick={scrollToTop} />
       <Container>
-        <Row>
+        <Row className="align-items-center">
           <Col xs={12} md={6}>
             <h1>{props.name}</h1>
             <p>{props.description}</p>
           </Col>
-          <Col>
+          <Col xs={12} md={6}>
             <Element>
                 {props.children}
             </Element>

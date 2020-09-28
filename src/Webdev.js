@@ -8,7 +8,7 @@ export default function WebDev() {
     return (
       <div>
       <Page sectionid="Websites" title="Web Development" />
-      <ShowCasePage title="Websites" name="Website Deployment" description="These are some of the websites that I've made in the past. The majority are made using Magento, but I also have some experience deploying them in Wordpress using AWS services.">
+      <ShowCasePage title="Websites" name="Website Deployment" description="These are some examples of the websites that I've worked on professionally. The e-commerce sites were made using Magento, and the blogs were deployed with Wordpress. Sites related to CBD are still in construction as the companies themselves are still being figured out (overall branding, products, packaging prices, availability). All of these sites were deployed on AWS, through different services such as EC2, S3, SES, Route 53, etc.">
       <WebsiteExamples />
       </ShowCasePage>
     </div>
