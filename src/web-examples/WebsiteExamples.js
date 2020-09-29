@@ -31,7 +31,7 @@ export default function WebsiteExamples() {
     </a>
   </Carousel.Item>
   <Carousel.Item>
-  <a href="https://www.anthrodesk.ca/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.petmedcbd.ca/" target="_blank" rel="noopener noreferrer">
         <img
           className="d-block w-100"
           src={petmedcbd}
