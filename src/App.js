@@ -7,6 +7,7 @@ import {
 import logo from './logo-simple.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Row, Col, Container} from 'react-bootstrap';
 import Navigation from './Navigation';
 import Photography from './Photography';
 import WebDev from './Webdev';
@@ -52,14 +53,21 @@ export default App;
 
 function Home() {
   return (
-    <div className="full-container d-flex flex-row">
+
+    <Container className="full-container">
+      <Row className="align-items-center m-5">
+        <Col>
     <img src={logo} className="my-logo" alt="logo" />
-    <div>
-      <h1 className="top-title">MIGUEL CEJA</h1>
-      <p className="description">WEB DEVELOPER</p>
-      <p className="description">& E-COMMERCE SPECIALIST</p>
-    </div>
-  </div>
+        </Col>
+        <Col>
+        <div>
+            <h1 className="top-title">MIGUEL CEJA</h1>
+            <p className="description">WEB DEVELOPER</p>
+            <p className="description">& E-COMMERCE SPECIALIST</p>
+            </div>
+          </Col>
+      </Row>
+    </Container>
   );
 }
 
