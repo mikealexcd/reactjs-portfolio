@@ -9,7 +9,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 function Navigation() {
     const [key, setKey] = useState('/');
     return (
-      <Navbar collapseOnSelect expand="lg"  bg="light" variant="light" defaultActiveKey={key} onSelect={(e) => setKey(e)}>
+      <Navbar id="top" collapseOnSelect expand="lg"  bg="light" variant="light" defaultActiveKey={key} onSelect={(e) => setKey(e)}>
         <Navbar.Brand>
             <Nav.Link as={Link} to="/" eventKey="/"><FontAwesomeIcon icon={faHome} /></Nav.Link>
         </Navbar.Brand>
