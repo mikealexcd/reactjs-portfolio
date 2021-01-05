@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp, faGripLines } from '@fortawesome/free-solid-svg-icons';
 import {Row, Col, Container} from 'react-bootstrap';
 import * as Scroll from 'react-scroll';
 
@@ -12,13 +12,17 @@ let scroll = Scroll.animateScroll;
 export default function ShowCasePage(props) {
 
     const image = props.image;
+    const previous = props.previous;
+    const next = props.next;
 
     return (
         <>
         <div className="full-container d-flex flex-column align-items-center" id={props.title}>
-        <ScrollTo to={props.previous} smooth={true}>
-              <FontAwesomeIcon icon={faChevronUp} className="mb-3 arrow-up" />
-      </ScrollTo>
+        {previous != null
+          ? <ScrollTo to={props.previous} smooth={true}><FontAwesomeIcon icon={faChevronUp} className="mb-3 arrow-up" /></ScrollTo>
+          : <ScrollTo to="top" smooth={true}><FontAwesomeIcon icon={faChevronUp} className="mb-3 arrow-up d-none" /></ScrollTo>
+        }
+        
       <Container>
         <Row className="align-items-center">
           {image != null 
@@ -32,9 +36,11 @@ export default function ShowCasePage(props) {
           </Col>
         </Row>
       </Container>
-      <ScrollTo to={props.next} smooth={true}>
-              <FontAwesomeIcon icon={faChevronDown} className="mt-5 arrow-down" />
-      </ScrollTo>
+      {next != null
+          ? <ScrollTo to={props.next} smooth={true}><FontAwesomeIcon icon={faChevronDown} className="mt-5 arrow-down" /></ScrollTo>
+          : <ScrollTo to="top" smooth={true}><FontAwesomeIcon icon={faGripLines} className="mt-5 arrow-down" /></ScrollTo>
+        }
+      
     </div>
     </>
     )
