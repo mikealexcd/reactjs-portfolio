@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import logo from './logo-simple.png';
+import About from './About';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row, Col, Container} from 'react-bootstrap';
@@ -12,7 +13,8 @@ import Navigation from './Navigation';
 import Photography from './Photography';
 import WebDev from './Webdev';
 import Ecommerce from './Ecommerce';
-import firebase from 'firebase/app'
+import firebase from 'firebase/app';
+import Arrows from './Arrows'
 
 firebase.initializeApp({
   apiKey: "AIzaSyAaP3yJEL1Vj2aE560sxo2eSavtWpuhoyw",
@@ -53,21 +55,26 @@ export default App;
 
 function Home() {
   return (
-
+    <>
     <Container className="full-container">
       <Row className="align-items-center m-5">
         <Col>
     <img src={logo} className="my-logo" alt="logo" />
         </Col>
         <Col>
-        <div>
+          <div>
             <h1 className="top-title">MIGUEL CEJA</h1>
             <p className="description">WEB DEVELOPER</p>
             <p className="description">& E-COMMERCE SPECIALIST</p>
-            </div>
+          </div>
           </Col>
       </Row>
+      <Row>
+      <Arrows totop="false" down="true" downtarget="about-me" />
+      </Row>
     </Container>
+    <About title="about-me"/>
+    </>
   );
 }
 

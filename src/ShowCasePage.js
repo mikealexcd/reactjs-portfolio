@@ -11,9 +11,7 @@ let scroll = Scroll.animateScroll;
 
 export default function ShowCasePage(props) {
 
-    function scrollToTop() {
-        return scroll.scrollToTop();
-      }
+    const image = props.image;
 
     return (
         <>
@@ -23,10 +21,10 @@ export default function ShowCasePage(props) {
       </ScrollTo>
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6}>
-            <h1>{props.name}</h1>
-            <p>{props.description}</p>
-          </Col>
+          {image != null 
+                ?<Col xs={12} md={6}><img src={props.image} alt={props.name} class="img-circle rounded-circle"/></Col>
+                :<Col xs={12} md={6}><h1>{props.name}</h1><p>{props.description}</p></Col>
+          }
           <Col>
             <Element>
                 {props.children}
